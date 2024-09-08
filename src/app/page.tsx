@@ -10,8 +10,8 @@ export default function Home() {
           <Image
             src="/assets/icons/logo-full.svg"
             alt="CarePulse logo"
-            width={500}
-            height={500}
+            width={173}
+            height={40}
             className="mb-12 h-10 w-fit"
           />
           <PatientForm></PatientForm>
@@ -26,10 +26,11 @@ export default function Home() {
         </div>
       </section>
       <Image
-        src="/assets/images/onboarding-img.png"
+        src="/assets/images/doctor_welcome.png"
         alt="doctors welcome"
         height={1000}
         width={1000}
+        priority
         sizes="(min-width: 2120px) 1000px, calc(46.21vw + 30px)"
         className="hidden md:block h-full object-cover max-w-[50%]"
       />

@@ -317,7 +317,7 @@ body {
 .react-datepicker__day-name,
 .react-datepicker__day,
 .react-datepicker-time__header {
-  background-color: #1a1d21 !important;
+  background-color: #191b1c !important;
   border-color: #363a3d !important;
   color: #abb8c4 !important;
 }
@@ -362,6 +362,20 @@ body {
   display: flex !important;
   align-items: center !important;
 }
+/* Target autofilled input fields */
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill {
+  background-color: #1a1d21 !important; /* Your desired background */
+  color: #ffffff !important; /* Your desired text color */
+  border: 1px solid #363a3d !important; /* Your border style */
+}
+
+/* Optional: Remove autofill transition to avoid flickering */
+input:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #ffffff !important; /* Ensures text stays white */
+}
 
 /* =====  REACT PHONE NUMBER INPUT OVERRIDES */
 .PhoneInputInput {
@@ -374,4 +388,7 @@ body {
 
 .PhoneInputInput::placeholder {
   color: #1a1d21;
+}
+.PhoneInputCountrySelect {
+  background: #1a1d21;
 }
