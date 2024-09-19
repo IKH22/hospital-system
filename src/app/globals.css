@@ -2,35 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}@layer base {
+@layer base {
   /* Remove scrollbar */
   .remove-scrollbar::-webkit-scrollbar {
     width: 0px;
@@ -51,6 +29,8 @@ body {
     /* background: #1e2238; */
     background: transparent;
   }
+  
+
 }
 
 @layer utilities {
@@ -80,7 +60,7 @@ body {
   }
 
   .sub-header {
-    @apply text-18-bold md:text-24-bold;
+    @apply text-18-bold  md:text-24-bold;
   }
 
   .container {
@@ -88,15 +68,15 @@ body {
   }
 
   .sub-container {
-    @apply mx-auto flex size-full flex-col py-10;
+    @apply mx-auto flex size-full flex-col py-5 ;
   }
 
   .side-img {
-    @apply hidden h-full object-cover md:block;
+    @apply hidden h-full object-cover fit:block;
   }
 
   .copyright {
-    @apply text-14-regular justify-items-end text-center text-dark-600 xl:text-left;
+    @apply text-14-regular justify-items-end text-center text-dark-600 ;
   }
 
   /* ==== SUCCESS */
@@ -127,7 +107,7 @@ body {
   }
 
   .checkbox-label {
-    @apply cursor-pointer text-sm font-medium text-dark-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
+    @apply cursor-pointer text-smba font-medium text-dark-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70 md:leading-none;
   }
 
   /* ==== File Upload */
@@ -225,9 +205,7 @@ body {
     @apply text-14-medium text-dark-700 !important;
   }
 
-  .shad-input {
-    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
-  }
+  
 
   .shad-input-icon {
     @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11 focus-visible:ring-0 focus-visible:ring-offset-0 !important;
@@ -292,16 +270,20 @@ body {
   .shad-sheet-content button {
     @apply top-2 focus:ring-0 focus:ring-offset-0 focus-visible:border-none focus-visible:outline-none focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
   }
+  .shad-input {
+    @apply bg-dark-400 placeholder:text-dark-600 border-dark-500 h-11  !important;
+  }
 
   /* =====  REACT PHONE NUMBER INPUT OVERRIDES */
   .input-phone {
-    @apply mt-2 h-11 rounded-md px-3 text-sm border bg-dark-400 placeholder:text-dark-600 border-dark-500 !important;
+    @apply  h-11.5 rounded-md px-3 text-sm border bg-dark-400 placeholder:text-dark-600 border-dark-500 !important;
   }
 
   /* =====  REACT DATE PICKER OVERRIDES */
   .date-picker {
-    @apply overflow-hidden border-transparent w-full placeholder:text-dark-600  h-11 text-14-medium rounded-md px-3 outline-none !important;
+    @apply overflow-hidden border-transparent w-full placeholder:text-dark-600 h-11 text-14-medium rounded-md px-3 outline-none !important;
   }
+  
 }
 
 /* =====  REACT-DATEPICKER OVERRIDES */

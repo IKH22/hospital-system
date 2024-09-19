@@ -20,6 +20,13 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        balg: "1.0625rem", // Custom size between base and lg
+        smba: "0.950rem",
+      },
+      height: {
+        "11.5": "2.875rem", // Add your custom height (11.5 * 0.25rem = 2.875rem)
+      },
       colors: {
         green: {
           500: "#24AE7C",
@@ -45,6 +52,9 @@ const config = {
           600: "#76828D",
           700: "#ABB8C4",
         },
+      },
+      screens: {
+        fit: "948px",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
